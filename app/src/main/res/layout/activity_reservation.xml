@@ -1,13 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_reservation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.kimsoohyeong.week3.Reservation">
 
-</RelativeLayout>
+    <TextView
+        android:text="레스토랑을 시작하려면 아래를 클릭하세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Switch
+            android:text="시작함 "
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/s1"
+             />
+
+        <TextView
+            android:visibility="invisible"
+            android:paddingTop="5dp"
+            android:paddingLeft="50dp"
+            android:textStyle="bold"
+            android:textColor="#4233f1"
+            android:text="예약시작 경과시간 : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/t1"
+            />
+
+        <Chronometer
+            android:textColor="#4233f1"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/c1"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="386dp"
+        android:visibility="invisible"
+        android:background="#eacecf"
+        android:id="@+id/fl1">
+
+        <DatePicker
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dp1" />
+
+        <TimePicker
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="414dp"
+            android:id="@+id/tp1" />
+
+        <GridLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="3"
+            android:columnCount="2"
+
+            android:id="@+id/gl1">
+
+            <TextView
+                android:text="성인"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:id="@+id/textView2"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="숫자를 입력하세요"
+                android:ems="10"
+                android:layout_columnWeight="1"
+                android:id="@+id/e1" />
+
+            <TextView
+                android:text="청소년"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_columnWeight="1"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="숫자를 입력하세요"
+                android:ems="10"
+                android:id="@+id/e2"
+                android:layout_columnWeight="1"/>
+
+            <TextView
+                android:text="어린이"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_columnWeight="1"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="숫자를 입력하세요"
+                android:ems="10"
+                android:id="@+id/e3"
+                android:layout_columnWeight="1"/>
+
+
+        </GridLayout>
+
+        <GridLayout
+            android:padding="5dp"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="7"
+            android:columnCount="2"
+            android:id="@+id/gl2">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:layout_columnSpan="2"
+                android:textColor="#5c53df"
+                android:textStyle="bold"
+                android:textSize="23dp"
+                android:text="예약 결과는 다음과 같습니다."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+
+            <TextView
+                android:textColor="#696767"
+                android:text="날짜 :"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:id="@+id/text9" />
+
+            <TextView
+                android:textColor="#696767"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:layout_columnWeight="1"
+                android:id="@+id/t2" />
+
+            <TextView
+                android:textColor="#696767"
+                android:text="시간 :"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:id="@+id/text10" />
+
+            <TextView
+                android:textColor="#696767"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:layout_columnWeight="1"
+                android:id="@+id/t3" />
+
+            <TextView
+                android:textColor="#696767"
+                android:text="성인 :"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:id="@+id/text11" />
+
+            <TextView
+                android:textColor="#696767"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:layout_columnWeight="1"
+                android:id="@+id/t4" />
+
+            <TextView
+                android:textColor="#696767"
+                android:text="청소년 :"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:id="@+id/text12" />
+
+            <TextView
+                android:textColor="#696767"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:layout_columnWeight="1"
+                android:id="@+id/t5" />
+
+            <TextView
+                android:textColor="#696767"
+                android:text="어린이 :"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:id="@+id/text13" />
+
+            <TextView
+                android:textColor="#696767"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="60dp"
+                android:layout_columnWeight="1"
+                android:id="@+id/t6" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_columnSpan="2"
+                android:textColor="#955d5e"
+                android:textSize="23dp"
+                android:text="예약되었습니다"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text14" />
+        </GridLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll1">
+
+        <Button
+            android:text="이전"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b1"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="다음"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b2"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
